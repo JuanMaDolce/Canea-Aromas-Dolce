@@ -28,6 +28,7 @@ function recibirProductos(category) {
 export const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([]);
+    const [loading, setloading] = useState(true)
     const { categoryId } = useParams();
 
     useEffect(()=>{
@@ -35,13 +36,14 @@ export const ItemListContainer = () => {
         recibirProductos(categoryId)
             .then(res =>{
                 setProductos(res)
+                setloading(false)
             })
     },[categoryId]);
 
     return (
         <div className='box'>
             <div className='cardsList'>
-                <ItemList items={productos}/>
+            {!loading ? <ItemList items={productos}/> : <p>Cargando...</p>}
             </div>
         </div>
         )

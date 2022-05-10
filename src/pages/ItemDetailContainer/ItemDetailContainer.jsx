@@ -28,18 +28,20 @@ function getItem(id) {
 export const ItemDetailContainer = () => {
 
     const [item, setDetail] = useState({})
+    const [loading, setloading] = useState(true)
     const { itemId } = useParams();
 
     useEffect(()=>{
         getItem(itemId)
         .then(res=>{
             setDetail(res)
+            setloading(false)
         })
     },[itemId])
 
     return (
         <div className='box'>
-            <ItemDetail item={item}/>
+            {!loading ? <ItemDetail item={item}/> : <p>Cargando...</p>}
         </div>
         )
 }
