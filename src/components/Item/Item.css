@@ -1,0 +1,31 @@
+.products{
+    border: solid black;
+    margin: 20px;
+    display: grid;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.products img{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}
+
+.products h2{
+    color:  black;
+    font-weight: lighter;
+    font-family:'Times New Roman', Times, serif;
+    font-style: oblique;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: aliceblue;
+}
+.detalle{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-family:'Times New Roman', Times, serif;
+    font-style: oblique;
+}

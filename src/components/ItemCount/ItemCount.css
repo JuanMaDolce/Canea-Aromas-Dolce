@@ -1,0 +1,11 @@
+.counter{
+    text-align: center;
+    background-color: aliceblue;
+    border: solid rgba(0, 0, 0, 0.548);
+    border-width: 1px;
+    padding: 20px;
+}
+
+.counter div{
+    margin: 5px;
+}

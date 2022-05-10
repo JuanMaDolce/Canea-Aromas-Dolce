@@ -1,0 +1,10 @@
+.cart{
+    width: 30px;
+    padding: 20px;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.cart:hover{
+    width: 40px;
+}

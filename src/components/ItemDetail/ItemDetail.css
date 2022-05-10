@@ -1,0 +1,56 @@
+.boxCart{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(2, 2fr);
+    align-items: center;
+    justify-items: center;
+    font-family:'Times New Roman', Times, serif;
+    font-style: oblique;
+}
+.cardsItem{
+    grid-row: 1/3;
+}
+.cardsItem img{
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.cardsDescription{
+    font-size: larger;
+    width: 500px;
+    text-align: center;
+}
+.cardsDescription h2{
+    font-size: 40px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    border: solid;
+    border-width: 1px;
+}
+.cardsDescription p{
+    font-size: 30px;
+}
+.cardsCount{
+    width: 300px;
+}
+
+.checkOut{
+    text-align: center;
+    background-color: aliceblue;
+    border: solid rgba(0, 0, 0, 0.548);
+    border-width: 1px;
+    padding: 20px;
+}
+
+.checkOut div{
+    margin: 5px;
+}
+
+.checkOut h2 a{
+    text-decoration: none;
+    color: black;
+}
+
+.checkOut p{
+    font-weight: bold;
+}
