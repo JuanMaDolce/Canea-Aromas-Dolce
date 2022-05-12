@@ -23,23 +23,27 @@
 .cardsDescription h2{
     font-size: 40px;
     border-radius: 5px;
-    background-color: aliceblue;
+    backdrop-filter: blur(3px);
     border: solid;
     border-width: 1px;
 }
 .cardsDescription p{
     font-size: 30px;
 }
-.cardsCount{
+.cartControler{
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .checkOut{
     text-align: center;
-    background-color: aliceblue;
+    backdrop-filter: blur(3px);
     border: solid rgba(0, 0, 0, 0.548);
     border-width: 1px;
     padding: 20px;
+    margin: 5px;
 }
 
 .checkOut div{

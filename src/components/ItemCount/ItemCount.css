@@ -1,11 +1,19 @@
 .counter{
     text-align: center;
-    background-color: aliceblue;
+    backdrop-filter: blur(3px);
     border: solid rgba(0, 0, 0, 0.548);
     border-width: 1px;
     padding: 20px;
 }
 
 .counter div{
+    margin: 5px;
+}
+
+.buttons{
+    backdrop-filter: blur(8px);
+    color: black;
+    border-radius: 5px;
+    border: solid 1px;
     margin: 5px;
 }

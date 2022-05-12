@@ -19,11 +19,11 @@ export const ItemCount = ({stock,initial,onAdd}) => {
 
     return (
         <div className='counter'>
-            <button onClick={() => restar()}>-</button>
+            <button className='buttons' onClick={() => restar()}>-</button>
             <input readOnly value={count} />
-            <button onClick={() => sumar()}>+</button>
+            <button className='buttons' onClick={() => sumar()}>+</button>
             <div>
-                <button onClick={() => onAdd(count)}>Agregar al Carrito</button>
+                <button className='buttons' onClick={() => onAdd(count)}>Agregar al Carrito</button>
             </div>
         </div>
     )
