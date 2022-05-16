@@ -1,0 +1,26 @@
+.cart{
+    font-family:'Times New Roman', Times, serif;
+    font-style: oblique;
+}
+
+.checkOut{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:whitesmoke;
+    border: solid black;
+    margin: 20px 50px
+}
+
+.backToHome{
+    text-align: center;
+    background-color:whitesmoke;
+    border: solid black;
+    margin: 20px 50px
+}
+
+.backToHome a{
+    text-decoration: none;
+    color: black;
+}

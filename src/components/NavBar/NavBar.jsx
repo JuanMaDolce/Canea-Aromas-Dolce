@@ -7,8 +7,8 @@ import CartWidget from '../CartWidget/CartWidget';
 function NavBar() {
     return (
         <div className='nav'>
-            <img className='logo' src={logo} alt="logo" />
             <nav>
+                <img className='logo' src={logo} alt="logo" />
                 <ul className='categorias'>
                     <li><NavLink to='/'>Home</NavLink></li>
                     <li><NavLink to='/category/velas'>Velas</NavLink></li>

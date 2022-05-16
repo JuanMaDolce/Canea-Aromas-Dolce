@@ -5,6 +5,11 @@
     backdrop-filter: blur(3px);
     border-bottom: solid black;
 }
+.nav nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .categorias {
     list-style-type: none;
     margin: 0;

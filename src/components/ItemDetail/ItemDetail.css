@@ -37,7 +37,7 @@
     justify-content: center;
 }
 
-.checkOut{
+.toCart{
     text-align: center;
     backdrop-filter: blur(3px);
     border: solid rgba(0, 0, 0, 0.548);
@@ -46,15 +46,15 @@
     margin: 5px;
 }
 
-.checkOut div{
+.toCart div{
     margin: 5px;
 }
 
-.checkOut h2 a{
+.toCart h2 a{
     text-decoration: none;
     color: black;
 }
 
-.checkOut p{
+.toCart p{
     font-weight: bold;
 }
