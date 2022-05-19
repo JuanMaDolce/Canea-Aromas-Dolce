@@ -18,10 +18,11 @@ const Cart = () => {
             {cartProducts.products.map(item => <CartProducts key={item.id} item={item}/>)}
             {cartProducts.products.length 
                 ?   <div className='checkOut'>
-                        <h1>Total de la compra ${totalPrice}</h1>
-                        <h2>Finalizar Compra</h2>
+                        <h2 onClick={() => cartProducts.clear()} >~ Vaciar Carrito ~</h2>
+                        <h1>~ Total de la compra ${totalPrice} ~</h1>
+                        <h2>~ Finalizar Compra ~</h2>
                     </div>
-                : <h1 className='backToHome'><Link to='/'>~No hay productos en el Carrito~</Link></h1>
+                : <h1 className='backToHome'><Link to='/'>~ No hay productos en el Carrito ~</Link></h1>
             }
         </div>
     )

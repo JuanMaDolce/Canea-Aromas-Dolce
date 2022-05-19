@@ -13,6 +13,10 @@
     margin: 20px 50px
 }
 
+.checkOut h2{
+    cursor: pointer;
+}
+
 .backToHome{
     text-align: center;
     background-color:whitesmoke;

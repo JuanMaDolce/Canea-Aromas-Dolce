@@ -25,8 +25,7 @@ export const ItemDetail = ({item}) => {
                     </div>
                     <div className='cartControler'>
                         <ItemCount stock={5} initial={0} onAdd={addHandler}/>
-                        <button className='buttons' onClick={() => cartCtx.clear()} >Vaciar Carrito</button>
-                        <button className='buttons' onClick={() => console.log(cartCtx.isInCart(item.id))} >¿Producto Agregado?</button>
+                        <button className='buttons' onClick={() => alert(cartCtx.isInCart(item.id))} >¿Producto Agregado?</button>
                         <div className='toCart'>
                             {cartCtx.products.length ? <h2><Link to='/Cart'>~Ir al Carrito~</Link></h2> : null}
                             <p>({ cartCtx.getCartQuantity()} Items)</p>

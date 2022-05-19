@@ -16,7 +16,10 @@ const CartProducts = ({item}) => {
                 <h2>Precio Unitario ${item.price}</h2>
             </div>
             <p>{item.quantity}</p>
-            <h2 className='deleteProduct' onClick={() => carListCtx.removeProduct(item.id)} >~ Eliminar Unidad ~</h2>
+            <div className='deleteProduct'>
+                <h2  onClick={() => carListCtx.removeProduct(item.id)} >~ Eliminar Unidad ~</h2>
+                <h2 onClick={() => carListCtx.removeAllProduct(item.id)} >~ Eliminar el Producto ~</h2>
+            </div>
         </div>
     )
 }

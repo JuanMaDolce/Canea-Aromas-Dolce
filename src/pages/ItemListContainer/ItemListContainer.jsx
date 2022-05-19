@@ -2,9 +2,20 @@ import React, {useEffect,useState} from 'react';
 import { useParams } from 'react-router-dom';
 import { ItemList } from '../../components/ItemList/ItemList';
 import './ItemListContainer.css'
+import {collection, getDocs, getFirestore, query, where, limit} from 'firebase/firestore';
 
 function recibirProductos(category) {
-    const myPromise = new Promise((resolve,reject) => {
+    const db = getFirestore();
+
+    const itemCollection = collection(db, 'items');
+
+    const q = category && query(
+        itemCollection,
+        where('category', '==', category)
+    );
+
+    return getDocs(q || itemCollection)
+/*     const myPromise = new Promise((resolve,reject) => {
         const catalogo = [
             {id:1, name: 'Bergamota', category: 'velas', url:"https://www.namesnack.com/images/namesnack-nombres-para-emprendimiento-de-velas-de-soja-3906x4882-20210526.jpeg?crop=21:16,smart&width=420&dpr=2"},
             {id:2, name: 'Jazmin', category: 'velas', url:"https://ae01.alicdn.com/kf/H6ab3d7eb908443e7acde6d850676886em/Vela-de-aromaterapia-de-250ml-fabricaci-n-de-maceta-de-aire-vela-de-cera-Diy-taza.jpg"},
@@ -21,7 +32,7 @@ function recibirProductos(category) {
             resolve(catalogoFilter);
         },2000);
     });
-    return myPromise;
+    return myPromise; */
 }
 
 
@@ -32,10 +43,32 @@ export const ItemListContainer = () => {
     const { categoryId } = useParams();
 
     useEffect(()=>{
+/*         const db = getFirestore();
+
+        const itemCollection = collection(db, 'items');
+
+        const q = query(
+            itemCollection,
+            where('price', '<', 800),
+            limit(1)
+        )
+
+        getDocs(q)
+            .then(snapshot =>{
+                console.log(snapshot.docs.map(doc => {
+                    return {...doc.data(), id: doc.id}
+                }))
+            })
+            .catch(
+                err => console.log(err)
+            ); */
+
         
         recibirProductos(categoryId)
-            .then(res =>{
-                setProductos(res)
+            .then(snapshot =>{
+                setProductos(snapshot.docs.map(doc => {
+                    return {...doc.data(), id: doc.id}
+                })) 
                 setloading(false)
             })
     },[categoryId]);

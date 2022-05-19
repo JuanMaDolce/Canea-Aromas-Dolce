@@ -1,10 +1,16 @@
 import React, {useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import { ItemDetail } from '../../components/ItemDetail/ItemDetail';
+import {doc, getDoc, getFirestore} from 'firebase/firestore'
 import './ItemDetailContainer.css'
 
 function getItem(id) {
-    const myPromise2 = new Promise((resolve,reject) => {
+    const db = getFirestore();
+
+    const itemRef = doc(db, 'items', id);
+
+    return getDoc(itemRef);
+/*     const myPromise2 = new Promise((resolve,reject) => {
         const catalogo = [
             {id:1, name: 'Bergamota', category: 'velas', description: 'Hojas de bergamota y notas de nectarina jugosas sentadas en un ramo de pétalos de iris, jazmín y freesia. Capas de ámbar báltico y haba de tonka.', url:"https://www.namesnack.com/images/namesnack-nombres-para-emprendimiento-de-velas-de-soja-3906x4882-20210526.jpeg?crop=21:16,smart&width=420&dpr=2", price: 700},
             {id:2, name: 'Jazmin', category: 'velas', description:'Blend floral inspirado en jazmines, violetas de los alpes, rosas y lilas presentes', url:"https://ae01.alicdn.com/kf/H6ab3d7eb908443e7acde6d850676886em/Vela-de-aromaterapia-de-250ml-fabricaci-n-de-maceta-de-aire-vela-de-cera-Diy-taza.jpg", price: 750},
@@ -22,21 +28,25 @@ function getItem(id) {
             resolve(item[0]);
         },2000);
     });
-    return myPromise2;
+    return myPromise2; */
 }
 
 export const ItemDetailContainer = () => {
 
-    const [item, setDetail] = useState({})
+    const [item, setItem] = useState({})
     const [loading, setloading] = useState(true)
     const { itemId } = useParams();
     
     useEffect(()=>{
         getItem(itemId)
-        .then(res=>{
+            .then(snapshot => {
+                setItem({...snapshot.data(), id: snapshot.id})
+                setloading(false)
+            })
+        /* .then(res=>{
             setDetail(res)
-            setloading(false)
-        })
+            
+        }) */
     },[itemId])
 
     return (
