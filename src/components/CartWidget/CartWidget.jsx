@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
-import './CartWidget.css';
 import cart from '../../images/cart.png';
 import CartContext from '../../pages/Store/cart-context';
+import { Link } from 'react-router-dom';
+import './CartWidget.css';
 
 export default function CartWidget() {
 
@@ -9,11 +10,11 @@ export default function CartWidget() {
 
     return (
         <>
-        {widgetCtx.products.length ? 
+        {widgetCtx.products.length ? <Link to='/Cart'>
             <div className='cartWidget'>
-                <img src={cart} alt="Cart" />
+                <img src={cart} alt="Cart"/>
                 <p>{widgetCtx.getCartQuantity()}</p>
-            </div>
+            </div></Link>
             : null} 
         </>
     )

@@ -1,12 +1,10 @@
 import React, { useContext } from 'react'
-import './CartProducts.css'
 import CartContext from '../../pages/Store/cart-context'
+import './CartProducts.css'
 
 const CartProducts = ({item}) => {
 
     const carListCtx = useContext(CartContext)
-
-
 
     return (
         <div className='cartProducts'>

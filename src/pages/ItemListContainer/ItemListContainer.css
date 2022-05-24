@@ -2,6 +2,8 @@
     backdrop-filter: blur(3px);
     border: solid black;
     margin: 10px;
+    font-size: larger;
+    font-family:'Times New Roman', Times, serif;
 }
 
 .cardsList{

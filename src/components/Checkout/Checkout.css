@@ -1,4 +1,4 @@
-.cart{
+.checkout{
     font-family:'Times New Roman', Times, serif;
     font-style: oblique;
     backdrop-filter: blur(3px);
@@ -6,8 +6,7 @@
     border-width: 1px;
     margin: 10px;
 }
-
-.purchase{
+.checkoutForm{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,21 +16,31 @@
     margin: 20px 50px
 }
 
-.purchase h2{
-    cursor: pointer;
+.checkoutForm form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid black 1px;
+    padding: 5px;
+    margin: 5px;
 }
-.purchase a{
-    text-decoration: none;
-    color: black;
+
+.checkoutForm input{
+    margin: 5px;
 }
-.backToHome{
-    text-align: center;
+
+.order{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color:whitesmoke;
     border: solid black;
     margin: 20px 50px
 }
 
-.backToHome a{
+.order a{
     text-decoration: none;
     color: black;
 }
