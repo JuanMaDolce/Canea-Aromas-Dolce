@@ -6,9 +6,9 @@ export const ItemCount = ({stock,initial,onAdd}) => {
     const [count, setCount] = useState(initial)
 
     function sumar() {
-        if (count < stock){
+        if (count < stock) {
             setCount(count + 1)
-        }
+        } 
     }
 
     function restar() {
@@ -23,7 +23,7 @@ export const ItemCount = ({stock,initial,onAdd}) => {
             <input readOnly value={count} />
             <button className='buttons' onClick={() => sumar()}>+</button>
             <div>
-                <button className='buttons' onClick={() => onAdd(count)}>Agregar al Carrito</button>
+                <button className='buttons' onClick={count > stock ? null : () => onAdd(count)}>Agregar al Carrito</button>
             </div>
         </div>
     )

@@ -35,11 +35,13 @@ export const ItemListContainer = () => {
     },[categoryId]);
 
     return (
-        <div className='box'>
+        <>
+        <div data-aos="fade-up" className='box'>
             <div className='cardsList'>
-                {/* Modificar por spinner */}
             {!loading ? <ItemList items={productos}/> : <p>Cargando...</p>}
             </div>
         </div>
+
+                </>
         )
 }

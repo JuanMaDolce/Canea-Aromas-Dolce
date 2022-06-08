@@ -1,6 +1,5 @@
 .cartProducts{
     border: solid black;
-    background-color: whitesmoke;
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     grid-template-rows: repeat(2, 2fr);
@@ -11,7 +10,7 @@
 }
 
 .cartProducts img{
-    width: 30%;
+    width: 40%;
     grid-row: 1/3;
     border: solid black;
 }
@@ -37,6 +36,23 @@
     font-size: 20px;
 }
 
+.cartProducts h1{
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: beige;
+    box-shadow: 1px 1px;
+}
+
 .cartProducts h2{
     cursor: pointer;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: beige;
+    box-shadow: 1px 1px;
+}
+
+.cartProducts h3{
+    font-size: 25px;
 }

@@ -1,5 +1,8 @@
 .products{
     border: solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px;
+    background-color: beige;
     margin: 20px;
     display: grid;
     display: flex;

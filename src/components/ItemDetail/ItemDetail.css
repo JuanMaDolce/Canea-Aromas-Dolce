@@ -23,9 +23,10 @@
 .cardsDescription h2{
     font-size: 40px;
     border-radius: 5px;
-    backdrop-filter: blur(3px);
     border: solid;
     border-width: 1px;
+    box-shadow: 1px 1px;
+    background-color: beige;
 }
 .cardsDescription p{
     font-size: 30px;
@@ -43,7 +44,9 @@
     border: solid rgba(0, 0, 0, 0.548);
     border-width: 1px;
     padding: 20px;
-    margin: 5px;
+    margin: px;
+    box-shadow: 1px 1px;
+    background-color: beige;
 }
 
 .toCart div{

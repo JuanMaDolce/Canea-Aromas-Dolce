@@ -69,8 +69,8 @@ const Checkout = () => {
                 {
                     orderId && 
                     <div className='order'>
-                        <h2>~ Compra realizada con exito! ~</h2>
-                        <h2>~ Su orden de compra es la N° {orderId} ~</h2>
+                        <h2>~ Gracias por tu compra {buyer.Name}! ~</h2>
+                        <h2>~ Tu orden de compra es la N° {orderId} ~</h2>
                         <h2><Link to='/'>~ Volver al Inicio ~</Link></h2>
                     </div>
                 }
